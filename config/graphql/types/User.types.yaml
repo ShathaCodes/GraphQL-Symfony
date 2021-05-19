@@ -1,0 +1,13 @@
+User:
+  type: object
+  config:
+    description: "a user"
+    fields:
+      id:
+        type: "Int!"
+        description: "The unique ID of the user."
+      name:
+        type: "String"
+      age:
+        type: "Int"
+

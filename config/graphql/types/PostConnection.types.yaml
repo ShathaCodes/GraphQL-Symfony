@@ -1,0 +1,11 @@
+PostConnection:
+  type: relay-connection
+  config:
+    nodeType: "Post!"
+    fields:
+      id:
+        type: "Int!"
+      title:
+        type: 'String!'
+      content:
+        type: 'String!'

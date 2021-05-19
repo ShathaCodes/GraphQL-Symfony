@@ -1,0 +1,10 @@
+Author:
+  type: object
+  config:
+    fields:
+      email:
+        type: "String"
+      posts:
+        type: "[Post!]!"
+      id:
+        type: "Int!"

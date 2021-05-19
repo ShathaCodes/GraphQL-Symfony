@@ -1,0 +1,8 @@
+ApartmentList:
+  type: object
+  config:
+    description: "A query to return list of Apartments"
+    fields:
+      apartments:
+        type: "[Apartment]"
+        description: "Apartment details"

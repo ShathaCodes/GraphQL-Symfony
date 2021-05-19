@@ -1,0 +1,41 @@
+Query:
+  type: object
+  config:
+    description: "ORM repository"
+    fields:
+      apartment:
+        type: "Apartment"
+        args:
+          id:
+            description: "Resolves using the apartment id."
+            type: "Int"
+        resolve: "@=resolver('Apartment', [args])"
+      apartment_list:
+        type: "ApartmentList"
+        args:
+          limit:
+            description: "limit"
+            type: "Int"
+        resolve: "@=resolver('ApartmentList', [args])"
+      author:
+        type: "Author"
+        args:
+          id:
+            type: "Int"
+        resolve: "@=resolver('Author', [args])"
+      allAuthors:
+        type: "[Author]"
+        resolve: "@=resolver('all_authors')"
+      post:
+        type: "Post"
+        args:
+          id:
+            type: "Int"
+        resolve: "@=resolver('Post', [args])"
+      allPosts:
+        type: "[Post]"
+        args:
+          limit:
+            description: "limit"
+            type: "Int"
+        resolve: "@=resolver('all_posts', [args])"

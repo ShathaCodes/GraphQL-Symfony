@@ -1,0 +1,51 @@
+Mutation:
+  type: object
+  config:
+    description: "mutationssss"
+    fields:
+      createUser:
+        type: User
+        resolve: "@=mutation('create_user', [args])"
+        args:
+          input:
+            "UserInput"
+      deleteUser:
+        type: User
+        resolve: "@=mutation('delete_user', [args])"
+        args:
+          id:
+            type: "Int"
+      updateUser:
+        type: User
+        resolve: "@=mutation('update_user', [args])"
+        args:
+          id:
+            type: "Int"
+          input:
+            "UserInput"
+      createPost:
+        type: Post
+        resolve: "@=mutation('create_post', [args])"
+        args:
+          input:
+            "PostInput"
+      createAuthor:
+        type: Author
+        resolve: "@=mutation('create_author', [args])"
+        args:
+          input:
+            "AuthorInput"
+      deletePost:
+        type: Post
+        resolve: "@=mutation('delete_post', [args])"
+        args:
+          id:
+            type: "Int"
+      updatePost:
+        type: Post
+        resolve: "@=mutation('update_post', [args])"
+        args:
+          id:
+            type: "Int"
+          input:
+            "PostInput"
